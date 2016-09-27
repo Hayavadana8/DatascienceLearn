@@ -1,4 +1,4 @@
-from IPython.display import IFrame
+#from IPython.display import IFrame
 
 #IFrame('http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data', width=300, height=200)
 # import load_iris function from datasets module
