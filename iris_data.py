@@ -1,4 +1,3 @@
-# IFrame('http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data', width=300, height=200)
 # import load_iris function from datasets module
 from sklearn.datasets import load_iris
 
@@ -54,3 +53,9 @@ tree = DecisionTreeClassifier()
 print tree
 tree.fit(X, y)
 print tree.predict(test_data)
+
+from sklearn.ensemble import AdaBoostClassifier
+
+ada = AdaBoostClassifier()
+ada.fit(X,y)
+print ada.predict(test_data)
