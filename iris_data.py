@@ -1,6 +1,4 @@
-#from IPython.display import IFrame
-
-#IFrame('http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data', width=300, height=200)
+# IFrame('http://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data', width=300, height=200)
 # import load_iris function from datasets module
 from sklearn.datasets import load_iris
 
@@ -32,3 +30,27 @@ X = iris.data
 # store response vector in "y"
 y = iris.target
 
+print type(iris.data)
+print type(iris.target)
+
+# training several models
+from sklearn.neighbors import KNeighborsClassifier
+
+knn = KNeighborsClassifier(n_neighbors=1)
+print knn
+knn.fit(X, y)
+test_data = [[3, 5, 4, 2], [5, 4, 3, 2]]
+print knn.predict(test_data)
+
+from sklearn.linear_model import LogisticRegression
+
+logreg = LogisticRegression()
+logreg.fit(X, y)
+print logreg.predict(test_data)
+
+from sklearn.tree import DecisionTreeClassifier
+
+tree = DecisionTreeClassifier()
+print tree
+tree.fit(X, y)
+print tree.predict(test_data)
